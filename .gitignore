@@ -1,0 +1,52 @@
+# Compiled source #
+*.class
+
+# Logs #
+*.log
+
+# OS generated files #
+.DS_Store
+Thumbs.db
+
+# Python #
+*.pyc
+*.pyo
+__pycache__/
+
+# Node.js #
+node_modules/
+
+# Java #
+*.jar
+*.war
+*.ear
+
+# Backup files #
+*.swp
+*.bak
+*.tmp
+*.old
+
+# Archivos objeto
+*.o
+*.obj
+
+# Archivos de programa ejecutables
+*.exe
+*.out
+*.app
+
+
+# Ignorar todos los archivos en estas carpetas
+code/sorting/data/array_input/**
+code/sorting/data/array_output/**
+code/matrix_multiplication/data/matrix_input/**
+code/matrix_multiplication/data/matrix_output/**
+
+# Excepto las propias carpetas
+!code/sorting/data/array_input/
+!code/sorting/data/array_output/
+!code/matrix_multiplication/data/matrix_input/
+!code/matrix_multiplication/data/matrix_output/
+
+.vscode

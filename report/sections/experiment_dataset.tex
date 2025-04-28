@@ -1,5 +1,29 @@
+Los casos de prueba empleados en este informe fueron los proporcionados en el enunciado, generados por los scripts en Python entregados originalmente. No se consideraron tamaños de entrada adicionales ni variaciones externas. Los conjuntos cubren:
+\begin{itemize}
+  \item \textbf{Ordenamiento:}
+  \\
+    - Tipo de datos: Los datos de los archivos de prueba estan conformados por solo numeros enteros.
+    
+    - Tamaño de la muestra: Los tamanios de muestra abarcan  $n = {10; 1000; 100000; 10 000 000}$, con distintos largo de los numeros siendo de 1 a 7 dígitos.
+    
+    - Distribución: ascendente, descendente y aleatoria, cada una con 3 casos por cada tamaño y distribución de los datos
+    
+    - Método de generación: Todos y cada uno de los casos de prueba se generan con el script presente en \path{/code/sorting/scripts/array_generator.py}
 
-Siempre 
-es importante generar varias muestras con características similares para una misma entrada, por ejemplo, variando tamaño del input dentro de lo que les permita la infraestructura utilizada en ests informe, con el fin de capturar una mayor diversidad de casos y obtener un análisis más completo del rendimiento de los algoritmos.
+
+    
+
+
+  \item \textbf{Multiplicación de matrices:}
+    \\
+    - Tipo de datos: Los datos de los archivos de prueba estan conformados por solo numeros enteros.
+    
+    - Tamaño de la muestra: Los tamaños de muestra abarcan  $n = {16,64,256,1024}$, con distintos tipos de números, pudiendo los valores ser binarios (0 y 1) o Decimales (0 al 9).
+    
+    - Distribución: Matices Densas, Diagonales y Dispersas, cada una con 3 casos por cada tamaño y distribución de los datos
+    
+    - Método de generación: Todos y cada uno de los casos de prueba se generan automaticamente con el script presente en \path{code/matrix_multiplication/scripts/matrix_generator.py}    
   
-Dado que esta tarea los casos de pueba son descritos en el enunciado, y entregados los programas en PYTHON que los generan, \textbf{no deben} considerar otros casos de prueba, ni otros tamaños de entrada. \textbf{En esta sección sólo debe comentar los casos de prueba} entregados en el enunciado de manera crítica.
+   
+\end{itemize}
+

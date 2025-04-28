@@ -37,3 +37,9 @@ node_modules/
 *.app
 
 .vscode
+
+code/sorting/data/array_input/
+code/sorting/data/array_output/
+
+code/matrix_multiplication/data/matrix_input
+code/matrix_multiplication/data/matrix_output

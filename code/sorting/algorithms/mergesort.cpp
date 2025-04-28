@@ -7,20 +7,9 @@
 using namespace std;
 
 
-//poblador de vector
-// vector<int> pobladorVector(vector<int> elementos){
-//     ifstream MyFile("../data/array_input/10_descendente_D7_c.txt");
-//     int n;
-//     while (MyFile >> n){
-//         elementos.push_back(n);
-//     }
-//     MyFile.close();
-//     return elementos;
-
-// }
 
 
-//funcion de ordenamiento mergeSort
+//funcion de ordenamiento mergeSort, fuente: https://www.geeksforgeeks.org/merge-sort/ y https://www.programiz.com/dsa/merge-sort
 
 void merge(vector<int>& elementos, int l, int m, int r){
     int n1 = m - l + 1;
@@ -73,37 +62,3 @@ void mergeSort(vector<int>& elementos, int l, int r){
     mergeSort(elementos, m + 1, r);
     merge(elementos, l, m, r);
 }
-
-
-
-// int main(){
-
-//     long tiempoMicrosegundos;
-//     double tiempoSegundos;
-        
-
-//     vector<int> elementos;
-//     elementos = pobladorVector(elementos);
-
-//     cout << "Vector original:" << endl;
-//     for (int num : elementos) {
-//         cout << num << " ";
-//     }
-//     cout << endl;
-//     //obteniendo el tiempo de ejecucion
- 
-//     auto startChrono = chrono::high_resolution_clock::now();
-//     mergeSort(elementos, 0, elementos.size() - 1);
-//     auto endChrono = chrono::high_resolution_clock::now();
-
-
-//     cout << "Elementos ordenados con exito!" << endl;
-
-//     auto durationMicrosegundos = chrono::duration_cast<chrono::microseconds>(endChrono - startChrono).count();
-    
-//     auto tiempoMilisegundos = durationMicrosegundos / 1e3;
-
-//     cout << "Tiempo de ejecucion: " << durationMicrosegundos << " microsegundos" << endl;
-//     cout << "Tiempo de ejecucion: " << tiempoMilisegundos << " milisegundos" << endl;    
-
-// }

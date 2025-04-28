@@ -24,7 +24,7 @@ void insertionSort(T arr[], int left, int right) {
     }
 }
 
-// Quicksort robusto con pivote mediano-de-tres, eliminación de recursión de cola
+// Quicksort robusto con pivote mediano-de-tres, eliminación de recursión de cola, fuente: https://www.geeksforgeeks.org/quick-sort/
 template<typename T>
 void quicksort(T arr[], int left, int right) {
     while (right - left > INSERTION_SORT_THRESHOLD) {
@@ -87,45 +87,3 @@ vector<int> generarVectorDescendente(int n) {
     }
     return arr;
 }
-
-// int main() {
-//     // Define los tamaños de las entradas que quieres probar
-//     vector<int> tamanos = {10, 100, 1000, 10000, 100000, 1000000, 10000000};
-//     vector<int> longitudesDigitos = {1, 7};
-
-//     for (int tamano : tamanos) {
-//         cout << "-----------------------------------------" << endl;
-//         cout << "Tamaño de la entrada: " << tamano << endl;
-
-//         for (int longitud : longitudesDigitos) {
-//             int minVal = 0;
-//             int maxVal = pow(10, longitud) - 1;
-
-//             // Prueba con datos aleatorios
-//             vector<int> datosAleatorios = generarVectorAleatorio(tamano, minVal, maxVal);
-//             auto start = high_resolution_clock::now();
-//             quicksort(datosAleatorios.data(), 0, datosAleatorios.size() - 1);
-//             auto stop = high_resolution_clock::now();
-//             auto duration = duration_cast<microseconds>(stop - start);
-//             cout << "  Aleatorios (" << longitud << " dígitos): " << duration.count() << " microsegundos" << endl;
-
-//             // Prueba con datos ordenados ascendentemente
-//             vector<int> datosAscendentes = generarVectorAscendente(tamano);
-//             start = high_resolution_clock::now();
-//             quicksort(datosAscendentes.data(), 0, datosAscendentes.size() - 1);
-//             stop = high_resolution_clock::now();
-//             duration = duration_cast<microseconds>(stop - start);
-//             cout << "  Ascendentes: (" << longitud << " dígitos): " << duration.count() << " microsegundos" << endl;
-
-//             // Prueba con datos ordenados descendentemente
-//             vector<int> datosDescendentes = generarVectorDescendente(tamano);
-//             start = high_resolution_clock::now();
-//             quicksort(datosDescendentes.data(), 0, datosDescendentes.size() - 1);
-//             stop = high_resolution_clock::now();
-//             duration = duration_cast<microseconds>(stop - start);
-//             cout << "  Descendentes: (" << longitud << " dígitos): " << duration.count() << " microsegundos" << endl;
-//         }
-//     }
-
-//     return 0;
-// }

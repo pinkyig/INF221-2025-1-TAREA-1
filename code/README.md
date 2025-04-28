@@ -4,7 +4,7 @@ Este proyecto contiene implementaciones en C/C++ (o tu lenguaje elegido) de dife
 
 ---
 
-## 📁 Estructura del repositorio
+## Estructura del repositorio
 
 ```bash
 ├── README.md                 
@@ -48,7 +48,7 @@ Estas carpetas contienen las  implementaciones en C/C++ de los  diferentes algor
 
 ---
 
-## 🔢 Multiplicación de matrices
+## Multiplicación de matrices
 
 En esta sección se implementa la multiplicación de dos matrices de tamaño `M × M`.
 

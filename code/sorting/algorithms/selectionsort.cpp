@@ -12,21 +12,10 @@
 
 using namespace std;
 
-//poblador de vector
-// vector<int> pobladorVector(vector<int> elementos){
-//     ifstream MyFile("../data/array_input/10_descendente_D7_c.txt");
-//     int n;
-//     while (MyFile >> n){
-//         elementos.push_back(n);
-//     }
-//     MyFile.close();
-//     return elementos;
-
-// }
 
 
 
-
+// fuente : https://www.geeksforgeeks.org/selection-sort/ y https://www.programiz.com/dsa/selection-sort
 void SelectionSort(vector<int>& elementos){
 
     int n = elementos.size();
@@ -43,25 +32,3 @@ void SelectionSort(vector<int>& elementos){
         }
     }
 }
-
-// int main(){
-
-//     vector<int> elementos = {3,2,1,5,4};
-
-//     cout << "Vector original:" << endl;
-//     for (int num : elementos) {
-//         cout << num << " ";
-//     }
-//     cout << endl;
-
-//     SelectionSort(elementos);
-
-//     cout << "Vector ordenado:" << endl;
-//     for (int num : elementos) {
-//         cout << num << " ";
-//     }
-//     cout << endl;
-
-
-//     return 0;
-// }

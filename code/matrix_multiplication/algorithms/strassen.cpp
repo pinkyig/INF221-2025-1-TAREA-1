@@ -9,6 +9,9 @@
 #include "strassen.h"
 using namespace std;
 
+
+//Fuente:https://www.geeksforgeeks.org/strassens-matrix-multiplication/
+
 vector<vector<int>> strassen(const vector<vector<int>>& matrizA, const vector<vector<int>>& matrizB) {
     int n = matrizA.size();
 

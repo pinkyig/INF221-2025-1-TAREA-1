@@ -16,7 +16,7 @@ Probando con datos aleatorios obtuvimos en promedio estos tiempos de ejecucion
   \centering
   \begin{tabular}{lrrrr}
 
-    Algoritmo  & SelectionSort\.(µs) & MergeSort\.(µs) & QuickSort\.(µs)  & \texttt{std::sort}\.(µs) \\
+    Algoritmo  & SelectionSort\.(ms) & MergeSort\.(ms) & QuickSort\.(ms)  & \texttt{std::sort}\.(ms) \\
 
     10  & 0 & 0.002 & 0 & 0 \\
     1000& 2& 0.156& 0.053 & 0.066\\
@@ -29,18 +29,18 @@ Probando con datos aleatorios obtuvimos en promedio estos tiempos de ejecucion
 \end{table}
 
 
-Como se aprecia en el cuadro~\ref{tab:sorting-results}, los tiempos de ejecución promedio para entradas ordenadas ascendente muestran una clara diferencia entre el comportamiento cuadrático de \texttt{SelectionSort} y las curvas $O(n\log n)$ de los demás algoritmos. Esta misma información se representa de forma visual en la Figura~\ref{fig:scatterplot_3}, donde la pendiente más pronunciada de la línea de \texttt{SelectionSort} contrasta con las trayectorias más suaves de \texttt{MergeSort}, \texttt{QuickSort} y \texttt{std::sort}.  
+Como se aprecia en el cuadro~\ref{tab:sorting-results}, los tiempos de ejecución promedio para entradas aleatorias muestran una clara diferencia entre el comportamiento cuadrático de \texttt{SelectionSort} y las curvas $O(n\log n)$ de los demás algoritmos. Esta misma información se representa de forma visual en la Figura~\ref{fig:sorting-aleatorio}, donde la pendiente más pronunciada de la línea de \texttt{SelectionSort} contrasta con las trayectorias más suaves de \texttt{MergeSort}, \texttt{QuickSort} y \texttt{std::sort}.  
 
 \begin{figure}[H]
     \centering
-    \begin{minipage}[t]{0.5\textwidth}
-        \includegraphics[width=\textwidth]{../code/sorting/data/plots/aleatorio_plot.png}
-    \end{minipage}%
-    \begin{minipage}[t]{0.5\textwidth}
-        \includegraphics[width=\textwidth]{../code/sorting/data/plots/aleatorio_plot.png}
-     \end{minipage}%
-    \caption{Ejemplo de scatterplot hecho con matplotlib.}
-    \label{fig:scatterplot_3}
+      \begin{minipage}[t]{0.5\textwidth}
+          \includegraphics[width=\textwidth]{../code/sorting/data/plots/aleatorio_plot.png}
+      \end{minipage}%
+      \begin{minipage}[t]{0.5\textwidth}
+          \includegraphics[width=\textwidth]{../code/sorting/data/plots/aleatorio_plot.png}
+       \end{minipage}%
+      \caption{Gráfica de tiempos de ejecución para datos aleatorios.}
+      \label{fig:sorting-aleatorio}
 \end{figure}
 
 \subsubsection*{Datos ordenados de forma Ascendente}
@@ -50,7 +50,7 @@ Probando con datos ordenados de manera ascendente,  obtuvimos en promedio estos 
   \centering
   \begin{tabular}{lrrrr}
 
-    Algoritmo  & SelectionSort\.(µs) & MergeSort\.(µs) & QuickSort\.(µs)  & \texttt{std::sort}\.(µs) \\
+    Algoritmo  & SelectionSort\.(ms) & MergeSort\.(ms) & QuickSort\.(ms)  & \texttt{std::sort}\.(ms) \\
 
     10  & 0 & 0.001 & 0 & 0 \\
     1000& 1.96& 0.105& 0.012 & 0.006\\
@@ -76,7 +76,7 @@ Esta misma diferencia de escalado queda reflejada de manera más intuitiva en la
     \begin{minipage}[t]{0.5\textwidth}
         \includegraphics[width=\textwidth]{../code/sorting/data/plots/ascendente_plot.png}
      \end{minipage}%
-    \caption{Ejemplo de scatterplot hecho con matplotlib.}
+    \caption{Gráfica de tiempos de ejecución para datos ordenados de forma ascendente.}
     \label{fig:ordenadas_ascendente}
 \end{figure}
 
@@ -91,7 +91,7 @@ Probando con datos ordenados de manera descendente,obtuvimos en promedio estos t
   \centering
   \begin{tabular}{lrrrr}
 
-    Algoritmo  & SelectionSort\.(µs) & MergeSort\.(µs) & QuickSort\.(µs)  & \texttt{std::sort}\.(µs) \\
+    Algoritmo  & SelectionSort\.(ms) & MergeSort\.(ms) & QuickSort\.(ms)  & \texttt{std::sort}\.(ms) \\
 
     10  & 0 & 0.001 & 0.0001 & 0 \\
     1000&1.62&  0.091& 0.009 & 0.008\\
@@ -103,7 +103,7 @@ Probando con datos ordenados de manera descendente,obtuvimos en promedio estos t
   \label{tab:sorting-results3}
 \end{table}
 
-Como se aprecia en la Tabla~\ref{tab:sorting-results3}, cuando los datos llegan ya ordenados de forma descendente, el rendimiento de \texttt{SelectionSort} se ve gravemente afectado, hasta el punto de volverse inviable para tamaños muy grandes. En contraste, \texttt{MergeSort}, \texttt{QuickSort} y \texttt{std::sort} conservan su comportamiento $O(n\log n)$, sufriendo únicamente un incremento moderado en los tiempos de ejecución. Esta disparidad en la escalada de tiempos queda de manifiesto en la Figura~\ref{fig:sorting-descendente}, donde las curvas de los algoritmos que usan dividir y conquistar muestran pendientes suaves frente a la pronunciada pendiente observada en \texttt{SelectionSort}.  
+Como se aprecia en la Tabla~\ref{tab:sorting-results3}, cuando los datos llegan ya ordenados de forma descendente, el rendimiento de \texttt{SelectionSort} se ve afectado al igual que antes, hasta el punto de volverse inviable para tamaños muy grandes. En contraste, \texttt{MergeSort}, \texttt{QuickSort} y \texttt{std::sort} conservan su comportamiento $O(n\log n)$, sufriendo únicamente un incremento moderado en los tiempos de ejecución. Esta disparidad en la escalada de tiempos queda de manifiesto en la Figura~\ref{fig:sorting-descendente}, donde las curvas de los algoritmos que usan dividir y conquistar muestran pendientes suaves frente a la pronunciada pendiente observada en \texttt{SelectionSort}.  
 
 \begin{figure}[H]
     \centering
@@ -113,7 +113,7 @@ Como se aprecia en la Tabla~\ref{tab:sorting-results3}, cuando los datos llegan 
     \begin{minipage}[t]{0.5\textwidth}
         \includegraphics[width=\textwidth]{../code/sorting/data/plots/descendente_plot.png}
      \end{minipage}%
-    \caption{Ejemplo de scatterplot hecho con matplotlib.}
+    \caption{Gráfica de tiempos de ejecución para datos ordenados de forma descendente.}
     \label{fig:sorting-descendente}
 \end{figure}
 
@@ -157,7 +157,7 @@ n=16 debido al mayor overhead de su estructura recursiva. Sin embargo, a medida 
     \begin{minipage}[t]{0.5\textwidth}
         \includegraphics[width=\textwidth]{../code/matrix_multiplication/data/plots/dense_matrices_plot.png}
      \end{minipage}%
-    \caption{Ejemplo de scatterplot hecho con matplotlib.}
+    \caption{Gráfica de tiempos de ejecución para matrices densas.}
     \label{fig:multi_densa}
 \end{figure}
 
@@ -191,7 +191,7 @@ La Tabla \ref{tab:sorting-results5} recoge los tiempos promedio de ejecución pa
     \begin{minipage}[t]{0.5\textwidth}
         \includegraphics[width=\textwidth]{../code/matrix_multiplication/data/plots/diagonal_matrices_plot.png}
      \end{minipage}%
-    \caption{Ejemplo de scatterplot hecho con matplotlib.}
+    \caption{Gráfica de tiempos de ejecución para matrices diagonales.}
     \label{fig:multi_diagonal}
 \end{figure}
 

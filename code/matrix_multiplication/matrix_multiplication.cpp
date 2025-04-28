@@ -162,7 +162,9 @@ int main() {
         cout << "----------------------------------------\n";
         
         //Escribir la matriz resultante en un archivo con el nombre de los archivos de entrada
-        string resultFilePath = "data/matrix_output/" + pair.first.substr(pair.first.find_last_of("/\\") + 1);
+        // string resultFilePath = "data/matrix_output/" + pair.first.substr(pair.first.find_last_of("/\\") + 1);
+        string resultFilePath = "data/matrix_output/" + sizeA + "_" + typeA + "_" + largeA + "_" + idA + "_out.txt";
+
         ofstream resultFile(resultFilePath);
         if (resultFile.is_open()) {
             for (const auto& row : C) {

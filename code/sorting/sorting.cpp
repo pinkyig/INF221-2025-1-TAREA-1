@@ -217,7 +217,7 @@ int main() {
         // Escribir la matriz resultante en un archivo
         const string outputDirectorySorted = "data/array_output/";
         fs::create_directories(outputDirectorySorted); // Crear directorio si no existe
-        string sortedFilePath = outputDirectorySorted + fs::path(ruta).filename().string();
+        string sortedFilePath = outputDirectorySorted + size + "_" + type + "_" + large + "_" + id + "_out.txt";
 
         ofstream sortedFile(sortedFilePath);
         if (sortedFile.is_open()) {

@@ -8,11 +8,10 @@ Este proyecto contiene implementaciones en C/C++ (o tu lenguaje elegido) de dife
 
 ```bash
 ├── README.md                 
-├── multiplicacion_matrices      
+├── matrix_multiplication      
 │   └── algorithms               # Implementaciones de algoritmos de multiplicación
-│       ├── naive.cpp            
-│       ├── strassen.cpp         
-│       └── matrix_multiplication.cpp
+│       ├── naive.cpp                  
+│       └── strassen.cpp  
 │   └── data                     # Carpeta para datos generados y resultados
 │       ├── matrix_input         # Archivos de entrada para matrices
 │       ├── matrix_output        # Archivos de salida para matrices multiplicadas

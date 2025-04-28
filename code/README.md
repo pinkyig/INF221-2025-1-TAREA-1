@@ -1,6 +1,6 @@
-# Proyecto: Algoritmos de Ordenamiento y Multiplicación de Matrices
+# Documentacion
 
-Este proyecto contiene implementaciones en C/C++ (o tu lenguaje elegido) de diferentes algoritmos de ordenamiento de arreglos unidimensionales y la multiplicación de matrices. El objetivo es comparar su desempeño, entender su complejidad y proporcionar herramientas de pruebas y generación de datos.
+Estas carpetas contienen las  implementaciones en C++ de los  diferentes algoritmos de ordenamiento de arreglos (SelectionSort,MergeSort y QuickSort) y la multiplicación de matrices N x N (Naive y Strassen). El objetivo es comparar su desempeño, entender su complejidad y proporcionar herramientas de pruebas y generación de datos.
 
 ---
 

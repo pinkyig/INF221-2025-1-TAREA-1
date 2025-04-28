@@ -5,6 +5,7 @@ CXXFLAGS = -std=c++20 -Wall -O2
 # Directorios
 SRC_DIR = .
 ALG_DIR = algorithms
+SCRIPT_DIR = scripts
 
 # Archivos fuente
 OBJS = sorting.o \
@@ -15,9 +16,18 @@ OBJS = sorting.o \
 
 # Ejecutable
 TARGET = sorting
+PLOT_SCRIPT = $(SCRIPT_DIR)/plot_generator.py
 
-# Regla principal
-all: $(TARGET)
+# Regla principal - ahora ejecuta después de compilar
+all: $(TARGET) run plot
+
+# Regla para ejecutar el programa principal
+run: $(TARGET)
+	./$(TARGET)
+
+# Regla para ejecutar el script de generación de gráficos
+plot: run
+	cd $(SCRIPT_DIR) && python3 plot_generator.py
 
 # Link final
 $(TARGET): $(OBJS)
@@ -47,3 +57,11 @@ $(ALG_DIR)/sort.o: $(ALG_DIR)/sort.cpp $(ALG_DIR)/sort.h
 # Limpiar archivos generados
 clean:
 	rm -f *.o $(ALG_DIR)/*.o $(TARGET)
+
+# Compilar sin ejecutar
+build: $(TARGET)
+
+# Solo ejecutar sin recompilar
+run-only: 
+	./$(TARGET)
+	cd $(SCRIPT_DIR) && python3 plot_generator.py

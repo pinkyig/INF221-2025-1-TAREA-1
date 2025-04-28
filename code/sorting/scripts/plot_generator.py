@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('code/sorting/data/measurements/time.txt')
+df = pd.read_csv('../data/measurements/time.txt')
 
 
 # Filtrar los datos de tipo 'aleatorio'
@@ -22,7 +22,7 @@ plt.legend()
 plt.grid(True)
 plt.xscale('log')  # Escala logarítmica para el eje x
 plt.yscale('log')  # Escala logarítmica para el eje y
-plt.savefig('code/sorting/scripts/aleatorio_plot.png')  # Guardar gráfico
+plt.savefig('../data/plots/aleatorio_plot.png')  # Guardar gráfico
 plt.close()
 
 # Filtrar los datos de tipo 'ascendente'
@@ -43,7 +43,7 @@ plt.legend()
 plt.grid(True)
 plt.xscale('log')  # Escala logarítmica para el eje x
 plt.yscale('log')  # Escala logarítmica para el eje y
-plt.savefig('code/sorting/scripts/ascendente_plot.png')  # Guardar gráfico
+plt.savefig('../data/plots/ascendente_plot.png')  # Guardar gráfico
 plt.close()
 
 # Filtrar los datos de tipo 'descendente'
@@ -64,5 +64,5 @@ plt.legend()
 plt.grid(True)
 plt.xscale('log')  # Escala logarítmica para el eje x
 plt.yscale('log')  # Escala logarítmica para el eje y
-plt.savefig('code/sorting/scripts/descendente_plot.png')  # Guardar gráfico
+plt.savefig('../data/plots/descendente_plot.png')  # Guardar gráfico
 plt.close()

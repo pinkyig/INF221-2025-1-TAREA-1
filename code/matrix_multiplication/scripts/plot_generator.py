@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Cargar datos
-datos = pd.read_csv('code/matrix_multiplication/data/measurements/time.txt')
+datos = pd.read_csv('../data/measurements/time.txt')
 # Filtrar matrices densas
 matrices_densas = datos[(datos['typeA'] == 'densa') & (datos['typeB'] == 'densa')]
 
@@ -21,7 +21,7 @@ plt.title('Tamaño vs Tiempo de ejecución para matrices densas')
 plt.legend()
 plt.grid(True)
 
-plt.savefig('code/matrix_multiplication/data/plots/dense_matrices_plot.png')  # Guardar gráfico
+plt.savefig('../data/plots/dense_matrices_plot.png')  # Guardar gráfico
 plt.close()
 
 #Filtrar matrices diagonales
@@ -40,7 +40,7 @@ plt.ylabel('Tiempo de ejecución (microsegundos)')
 plt.title('Tamaño vs Tiempo de ejecución para matrices diagonales')
 plt.legend()
 plt.grid(True)
-plt.savefig('code/matrix_multiplication/data/plots/diagonal_matrices_plot.png')  # Guardar gráfico
+plt.savefig('../data/plots/diagonal_matrices_plot.png')  # Guardar gráfico
 plt.close()
 
 # Filtrar matrices dispersas
@@ -59,6 +59,6 @@ plt.ylabel('Tiempo de ejecución (microsegundos)')
 plt.title('Tamaño vs Tiempo de ejecución para matrices dispersas')
 plt.legend()
 plt.grid(True)
-plt.savefig('code/matrix_multiplication/data/plots/sparse_matrices_plot.png')  # Guardar gráfico
+plt.savefig('../data/plots/sparse_matrices_plot.png')  # Guardar gráfico
 plt.close()
 

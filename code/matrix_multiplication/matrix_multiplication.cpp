@@ -1,8 +1,3 @@
-// Ejemplo de lectura de archivos en un directorio en C++
-// -----------------------------------------------------
-// Este ejemplo utiliza la librería estándar <filesystem> introducida en C++17.
-// Asegúrate de compilar con soporte para C++17 o superior (e.g., -std=c++17).
-
 #include <iostream>
 #include <filesystem>
 #include <string>
@@ -97,7 +92,6 @@ vector<pair<string, string>> getSortedPathPairs(const string& ruta) {
 }
 
 int main() {
-    // Ruta fija dada (ajusta este valor según tu directorio)
     const string ruta = "data/matrix_input";
 
     // Obtener los pares de rutas ordenadas
@@ -162,7 +156,6 @@ int main() {
         cout << "----------------------------------------\n";
         
         //Escribir la matriz resultante en un archivo con el nombre de los archivos de entrada
-        // string resultFilePath = "data/matrix_output/" + pair.first.substr(pair.first.find_last_of("/\\") + 1);
         string resultFilePath = "data/matrix_output/" + sizeA + "_" + typeA + "_" + largeA + "_" + idA + "_out.txt";
 
         ofstream resultFile(resultFilePath);

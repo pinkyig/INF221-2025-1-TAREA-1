@@ -149,23 +149,3 @@ vector<vector<int>> strassen(const vector<vector<int>>& matrizA, const vector<ve
     return C;
 }
 
-// int main() {
-//     srand(time(0)); // semilla para generar números aleatorios
-
-//     vector<vector<int>> matrizA = loadMatrix("../data/matrix_input/1024_dispersa_D10_c_1.txt");
-//     vector<vector<int>> matrizB = loadMatrix("../data/matrix_input/1024_dispersa_D10_c_2.txt");
-
-//     auto startChrono = chrono::high_resolution_clock::now();
-//     vector<vector<int>> C = strassen(matrizA, matrizB);
-//     auto endChrono = chrono::high_resolution_clock::now();
-
-//     cout << "Matriz multiplicada con exito!" << endl;
-
-//     auto durationMicrosegundos = chrono::duration_cast<chrono::microseconds>(endChrono - startChrono).count();
-//     auto tiempoMilisegundos = durationMicrosegundos / 1e3;
-
-//     cout << "Tiempo de ejecucion: " << durationMicrosegundos << " microsegundos" << endl;
-//     cout << "Tiempo de ejecucion: " << tiempoMilisegundos << " milisegundos" << endl;
-
-//     return 0;
-// }

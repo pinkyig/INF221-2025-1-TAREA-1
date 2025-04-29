@@ -31,58 +31,7 @@ void imprimirVector(const vector<int>& elementos) {
     cout << endl;
 }
 
-// int main(){
-//     vector <int> arreglo;
 
-//     vector<int> elementos;
-//     elementos = pobladorVector(elementos);
-
-//     cout << "Vector Original: ";
-//     imprimirVector(elementos);
-
-
-//     //Probando MergeSort
-//     arreglo = elementos;
-//     auto inicio = chrono::high_resolution_clock::now();
-//     mergeSort(arreglo, 0, arreglo.size()-1);
-//     auto fin = chrono::high_resolution_clock::now();
-//     auto duracionMerge = chrono::duration_cast<chrono::microseconds>(fin - inicio).count();
-//     cout << "MergeSort tomó: " << duracionMerge << " microsegundos" << endl;
-
-
-//     //Probando QuickSort
-//     arreglo = elementos;
-//     inicio = chrono::high_resolution_clock::now();
-//     quickSort(arreglo, 0, arreglo.size()-1);
-//     fin = chrono::high_resolution_clock::now();
-//     auto duracionQuick = chrono::duration_cast<chrono::microseconds>(fin - inicio).count();
-//     cout << "QuickSort tomó: " << duracionQuick << " microsegundos" << endl;
-
-//     //Probando SelectionSort
-//     arreglo = elementos;
-//     inicio = chrono::high_resolution_clock::now();
-//     SelectionSort(arreglo);
-//     fin = chrono::high_resolution_clock::now();
-//     auto duracionSelect = chrono::duration_cast<chrono::microseconds>(fin - inicio).count();
-//     cout << "SelectionSort tomó: " << duracionSelect << " microsegundos" << endl;
-
-//     //Probando sort
-
-//     arreglo = elementos;
-//     inicio = chrono::high_resolution_clock::now();
-//     sortArray(arreglo);
-//     fin = chrono::high_resolution_clock::now();
-//     auto duracionLib = chrono::duration_cast<chrono::microseconds>(fin - inicio).count();
-//     cout << "LibrarySort tomó: " << duracionLib << " microsegundos" << endl;
-    
-//     return 0 ;
-// }
-
-
-// Ejemplo de lectura de archivos en un directorio en C++
-// -----------------------------------------------------
-// Este ejemplo utiliza la librería estándar <filesystem> introducida en C++17.
-// Asegúrate de compilar con soporte para C++17 o superior (e.g., -std=c++17).
 
 #include <iostream>
 #include <filesystem>
@@ -262,8 +211,4 @@ int main() {
     return 0;
 }
 
-/*
-Explicación:
-- Extrayendo la parte numérica al inicio del nombre (antes del primer '_'), se puede ordenar por valor entero.
-- Si los prefijos numéricos son iguales, se usa la comparación lexicográfica del nombre completo.
-*/
+

@@ -40,10 +40,6 @@ Estas carpetas contienen las  implementaciones en C++ de los  diferentes algorit
 │   ├── sorting.cpp               # Archivo de compilación
 ```
 
-# Documentacion
-
-Estas carpetas contienen las  implementaciones en C/C++ de los  diferentes algoritmos de ordenamiento de arreglos unidimensionales (SelectionSort Qu)y la multiplicación de matrices (Naive y Strassen). El objetivo es comparar su desempeño, entender su complejidad y proporcionar herramientas de pruebas y generación de datos.
-
 
 ---
 
